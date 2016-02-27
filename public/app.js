@@ -2,22 +2,6 @@ angular.module('app', [])
   .config(router)
   .run(requireUserSignin)
 
-  .directive('pagination', function($parse){
-    return {
-      restrict: 'A',
-      template: '',
-      scope: {
-        limit: '=limit'
-      },
-      link: function(scope, elem, attrs) {
-        var dataExpr = $parse(attrs.data);
-        scope.$watchCollection(dataExpr, function(val) {
-          scope.data = val;
-        });
-      }
-    }
-  })
-
   router.$inject = ['$urlRouterProvider', '$stateProvider', '$httpProvider'];
 
   function router($urlRouterProvider, $stateProvider, $httpProvider) {
