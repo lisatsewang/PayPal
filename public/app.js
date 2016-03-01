@@ -1,18 +1,18 @@
-angular.module('app', [])
-  .config(router)
-  .run(requireUserSignin)
-
-  router.$inject = ['$urlRouterProvider', '$stateProvider', '$httpProvider'];
-
-  function router($urlRouterProvider, $stateProvider, $httpProvider) {
+angular.module('app', [
+  'ui.router',
+  'app.homePage',
+  'app.sendMoney'
+  ])
+  .config(function($urlRouterProvider, $stateProvider, $httpProvider) {
+    
     $urlRouterProvider.otherwise("/");
 
     // paths
     $stateProvider
       .state('homepage',{
         url: '/',
-        templateUrl: './homepage/homepageTemplate.html',
-        controller: 'homepageCtrl',
+        templateUrl: './homePage/homePageTemplate.html',
+        controller: 'homePageCtrl',
         controllerAs: 'home'
       })
       .state('sendMoney', {
@@ -21,26 +21,27 @@ angular.module('app', [])
         controller: 'sendMoneyCtrl',
         controllerAs: 'sendMoney'
       })
-      .state('successPage', {
-        url: '/successPage',
-        templateUrl: './successPage/successPageTemplate.html',
-        controller: 'successCtrl',
-        controllerAs: 'success'
-      })
-      .state('histroy', {
+      // .state('successPage', {
+      //   url: '/successPage',
+      //   templateUrl: './successPage/successPageTemplate.html',
+      //   controller: 'successCtrl',
+      //   controllerAs: 'success'
+      // })
+      .state('history', {
         url:'/history',
         templateUrl: './historyPage/historyTemplate.html',
-        controller: 'historyCtrl',
+        // controller: 'historyCtrl',
         controllerAs: 'history',
-        resolve: {
-          gethistory: gethistory
-        }
+        // resolve: {
+        //   gethistory: gethistory
+        // }
       })
       
       // resolve functions
-      function gethistory($http) {
+      // function gethistory($http) {
         
-      }
-  }
+      // }
+
+  })
 
     

@@ -1,0 +1,29 @@
+<div class="background">
+	
+	<form name="sendMoneyForm">
+	<div class="title">Payment Details</div>
+	<input ng-model="sendMoney.email" name="email" type="email" placeholder="payeee email" ng-class="{ 'has-error' : sendMoneyForm.email.$invalid && !sendMoneyForm.email.$pristine }">
+
+	<div id="amountInput">
+	<div id="currencySign">$</div>
+	<input class="money" name="amount" type="number" ng-model="sendMoney.amount" placeholder="amount" value="" min="0" ng-class="{ 'has-error' : sendMoneyForm.amount.$invalid && !sendMoneyForm.amount.$pristine }">
+	
+
+	<select class="currency" 
+		ng-model="sendMoney.currency"
+		ng-options="currency.option for currency in sendMoney.currencyOptions">
+	</select>
+	</div>
+	<textarea ng-model="sendMoney.message" placeholder="message (optional):">
+	</textarea>
+	<div class="text">What is this payment for?</div>
+
+	<select ng-model="sendMoney.purpose"
+	ng-options="purpose.option for purpose in sendMoney.purposeOptions">
+	</select>
+
+	<button class="small" ng-click="sendMoney.clear()" class=""><strong>clear</strong></button>
+	<button class="small" ng-click="sendMoney.sendMoney()" class=""><strong>send</strong></button>
+
+	</form>
+</div>

@@ -1,0 +1,125 @@
+.title {
+	font-family: Impact;
+    font-size: 36px;
+    color: #B3B3B3;
+    text-align: center;
+    margin-top: 25px;
+}
+.Paypal {
+    margin-top: 110px;
+}
+.background {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 320px;
+	background-color: #E6E6E6;
+	margin: auto;
+	height: 568px;
+	position: absolute;
+	text-align: center;
+}
+button {
+	background-color: #666666;
+	color: #CCCCCC;
+	font-size: 21px;
+	margin: auto;
+	border-radius: 4px;
+}
+.large {
+	display: block;
+	width: 265px;
+	height:57px;
+	margin-top: 25px;
+}
+.small {
+	width: 130px;
+	height:57px;
+	margin-top: 25px;
+}
+
+/*send money page*/
+select {
+	border: none;
+	box-sizing: content-box;
+	background-color: white;
+}
+
+input, textarea, select {
+	width: 250px;
+    height: 40px;
+    font-size: 21px;
+    color: #B3B3B3;
+    margin-top: 20px;
+    padding-left: 10px;
+    border: double;
+    border-radius: 4px;
+}
+.money {
+	width: 140px;
+    padding-left: 29px;
+}
+.currency {
+	width: 81px;
+}
+
+.text {
+	font-family: sans-serif;
+    color: #B3B3B3;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+textarea {
+	height: 100px;
+	padding-top: 10px;
+	margin-top: 90px;
+}
+
+.has-error {
+	border-color: red;
+}
+.error {
+	margin-left: 25px;
+    margin-top: 2px;
+    color: red;
+    font-size: 10px;
+    font-family: sans-serif;
+    position: absolute;
+}
+
+
+#currencySign {
+	position: absolute;
+    margin-top: 34px;
+    margin-left: 38px;
+    font-size: 21px;
+    font-family: sans-serif;
+    color: #B3B3B3;
+}
+
+#amountInput {
+	position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
