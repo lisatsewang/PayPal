@@ -11,6 +11,7 @@ function generateHistory () {
   return history;
 }
 
+// generates date from from jan 2015 to now
 function getADate(index) {
     var start = new Date(2015, 0, 1);
     var end = new Date();
@@ -19,6 +20,7 @@ function getADate(index) {
     return date.toLocaleDateString();
 }
 
+// generates random payee
 function getPayee() {
   var names = [ 
     'Sommer Melton', 'Mason Warren', 'Mellissa Gambrell', 'Sunday Kollman', 'Lavonia Rock',
@@ -31,16 +33,19 @@ function getPayee() {
   return names[index];
 }
 
+// generates random currency
 function getCurrency() {
   var currencies = ['$', '€', '£', '¥'];
   var index = Math.floor(100 * Math.random()) % currencies.length;
   return currencies[index];
 }
 
+// generate random amount
 function getAmount() {
   var num = 42 * Math.random();
   return num.toFixed(2);
 }
 
+// export mock data
 module.exports = generateHistory();
 

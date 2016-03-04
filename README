@@ -1,0 +1,7 @@
+* please npm install server dependency
+
+* bower components are included
+
+* in terminal, navigate to server/ folder to start server
+
+* in chrome browser, go to http://127.0.0.1:8000/ or localhost:8000 to see the app

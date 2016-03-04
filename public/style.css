@@ -26,7 +26,7 @@
 
 button {
 	background-color: #666666;
-	color: #CCCCCC;
+	color: #e6e6e6;
 	font-size: 21px;
 	margin: auto;
 	border-radius: 4px;
@@ -49,6 +49,7 @@ button {
 
 .Paypal {
     margin-top: 165px;
+    text-shadow: 2px 2px #666666;
 }
 
 
@@ -175,6 +176,7 @@ th {
 
 .historyButton {
 	margin-bottom: 20px;
+    width: 290px;
 }
 
 .history th, .history td {
