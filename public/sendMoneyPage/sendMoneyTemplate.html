@@ -1,16 +1,17 @@
 <div class="background">
 	
-	<form name="sendMoneyForm">
 	<div class="title">Payment Details</div>
-	<input ng-model="sendMoney.email" name="email" type="email" placeholder="payeee email" ng-class="{ 'has-error' : sendMoneyForm.email.$invalid && !sendMoneyForm.email.$pristine }">
+	
+	<form name="sendMoneyForm" ng-submit="sendMoney.sendMoney(sendMoney.details)">
+	<input ng-model="sendMoney.details.email" name="email" type="email" placeholder="payee email" ng-class="{ 'has-error' : sendMoneyForm.email.$invalid && !sendMoneyForm.email.$pristine }" required>
 
 	<div id="amountInput">
-	<div id="currencySign">$</div>
-	<input class="money" name="amount" type="number" ng-model="sendMoney.amount" placeholder="amount" value="" min="0" ng-class="{ 'has-error' : sendMoneyForm.amount.$invalid && !sendMoneyForm.amount.$pristine }">
+	<div id="currencySign">{{sendMoney.details.currency.symbol}}</div>
+	<input class="money" name="amount" type="number" ng-model="sendMoney.details.amount" placeholder="amount" min="0" ng-class="{ 'has-error' : sendMoneyForm.amount.$invalid && !sendMoneyForm.amount.$pristine }" required>
 	
 
 	<select class="currency" 
-		ng-model="sendMoney.currency"
+		ng-model="sendMoney.details.currency"
 		ng-options="currency.option for currency in sendMoney.currencyOptions">
 	</select>
 	</div>
@@ -22,8 +23,13 @@
 	ng-options="purpose.option for purpose in sendMoney.purposeOptions">
 	</select>
 
-	<button class="small" ng-click="sendMoney.clear()" class=""><strong>clear</strong></button>
-	<button class="small" ng-click="sendMoney.sendMoney()" class=""><strong>send</strong></button>
-
+	<button class="small" ng-click="sendMoney.clear()"><strong>clear</strong></button>
+	<button class="small"><strong>send</strong></button>
+	
 	</form>
 </div>
+
+
+<!-- show when loading -->
+<div ng-show="sendMoney.loading" class="dim"></div>
+<img ng-show="sendMoney.loading" id="loadingWheel" src="../loading_apple.gif" alt="loading">

@@ -1,6 +1,6 @@
 function generateHistory () {
   var history = [];
-  for (var i = 0; i < 250; i++) {
+  for (var i = 250; i >= 0; i--) {
     history.push({
       date: getADate(i),
       payee: getPayee(),
@@ -32,7 +32,7 @@ function getPayee() {
 }
 
 function getCurrency() {
-  var currencies = ['USD', 'EUR', 'GBP', 'JPY'];
+  var currencies = ['$', '€', '£', '¥'];
   var index = Math.floor(100 * Math.random()) % currencies.length;
   return currencies[index];
 }

@@ -1,7 +1,10 @@
 angular.module('app', [
   'ui.router',
   'app.homePage',
-  'app.sendMoney'
+  'app.sendMoney',
+  'app.success',
+  'app.history',
+  'app.dataServices'
   ])
   .config(function($urlRouterProvider, $stateProvider, $httpProvider) {
     
@@ -21,26 +24,27 @@ angular.module('app', [
         controller: 'sendMoneyCtrl',
         controllerAs: 'sendMoney'
       })
-      // .state('successPage', {
-      //   url: '/successPage',
-      //   templateUrl: './successPage/successPageTemplate.html',
-      //   controller: 'successCtrl',
-      //   controllerAs: 'success'
-      // })
+      .state('success', {
+        url: '/success',
+        templateUrl: './successPage/successTemplate.html',
+        controller: 'successCtrl',
+        controllerAs: 'success'
+      })
       .state('history', {
         url:'/history',
         templateUrl: './historyPage/historyTemplate.html',
-        // controller: 'historyCtrl',
+        controller: 'historyCtrl',
         controllerAs: 'history',
-        // resolve: {
-        //   gethistory: gethistory
-        // }
+        resolve: {
+          getHistoryPrep: getHistory
+        }
       })
       
-      // resolve functions
-      // function gethistory($http) {
-        
-      // }
+      // resolve function
+      //
+      function getHistory($http, transactionServices) {
+        return transactionServices.getAllTransaction();
+      }
 
   })
 

@@ -1,13 +1,13 @@
+/* common styling */
 .title {
 	font-family: Impact;
-    font-size: 36px;
+    font-size: 35px;
     color: #B3B3B3;
     text-align: center;
     margin-top: 25px;
 }
-.Paypal {
-    margin-top: 110px;
-}
+
+
 .background {
 	top: 0;
 	bottom: 0;
@@ -19,7 +19,11 @@
 	height: 568px;
 	position: absolute;
 	text-align: center;
+	overflow: auto;
 }
+
+/* button setting */
+
 button {
 	background-color: #666666;
 	color: #CCCCCC;
@@ -27,6 +31,7 @@ button {
 	margin: auto;
 	border-radius: 4px;
 }
+
 .large {
 	display: block;
 	width: 265px;
@@ -38,6 +43,14 @@ button {
 	height:57px;
 	margin-top: 25px;
 }
+
+
+/* homepage */
+
+.Paypal {
+    margin-top: 165px;
+}
+
 
 /*send money page*/
 select {
@@ -57,8 +70,8 @@ input, textarea, select {
     border-radius: 4px;
 }
 .money {
-	width: 140px;
-    padding-left: 29px;
+	width: 142px;
+    padding-left: 28px;
 }
 .currency {
 	width: 81px;
@@ -81,19 +94,10 @@ textarea {
 .has-error {
 	border-color: red;
 }
-.error {
-	margin-left: 25px;
-    margin-top: 2px;
-    color: red;
-    font-size: 10px;
-    font-family: sans-serif;
-    position: absolute;
-}
-
 
 #currencySign {
 	position: absolute;
-    margin-top: 34px;
+    margin-top: 32px;
     margin-left: 38px;
     font-size: 21px;
     font-family: sans-serif;
@@ -107,19 +111,81 @@ textarea {
     left: 0;
 }
 
+/* loading */
 
+#loadingWheel {
+	position: absolute;
+    top: 0;
+    height: 42px;
+    width: 42px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
 
+.dim {
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
 
+/* success page */
+table {
+	width: 265px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #b3b3b3;
+}
 
+td {
+	background-color: white;
+    height: 40px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #666666;
+    overflow: auto;
+}
 
+th {
+	font-family: sans-serif;
+    color: white;
+    height: 47px;
+    font-size: 20px;
+}
 
+.thank {
+	font-family: sans-serif;
+    font-size: 17px;
+    margin-top: 5px;
+    color: #B3B3B3;
+}
 
+.what {
+	margin-top: 30px;
+    font-family: sans-serif;
+    font-size: 22px;
+    color: #B3B3B3;
+}
 
+/* history */
 
+.historyButton {
+	margin-bottom: 20px;
+}
 
+.history th, .history td {
+	font-size: 12px;
+}
+.history th {
+	border: 1px solid white;
+}
 
-
-
-
-
-
+.history {
+    width: 290px;
+    margin: auto;
+    margin-top: 15px;
+    background-color: #b3b3b3;

@@ -13,7 +13,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../public'));
 
 app.get('/gethistory', function(req, res) {
-  res.send(history);
+  // res.send(history);
+  res.status(200);
+  res.json({data: history});
 });
 
 

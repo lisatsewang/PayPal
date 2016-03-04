@@ -1,3 +1,21 @@
-<div>
-	history
+<div class="background">
+	
+	<div class="title">Transaction History</div>
+
+	<table class="history">
+		<tr>
+			<th>Date</th>
+			<th>Payee</th>
+			<th>Amount</th>
+		</tr>
+		<tr ng-repeat="entry in history.details">
+			<td>{{entry.date}}</td>
+			<td>{{entry.payee}}</td>
+			<td>{{entry.currency}}{{entry.amount}}</td>
+		</tr>
+	</table>
+
+	<button class="large historyButton" ng-click="history.toHomePage()"><strong>To Homepage</strong></button>
+	
+	</form>
 </div>

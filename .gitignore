@@ -1,7 +1,12 @@
 # Dependency directorys
-# Deployed apps should consider commenting these lines out:
-# see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules-folder-into-git
 node_modules/
 
 # OS generated files
 *.DS_Store
+
+# Paypal take home project direction
+PayPalUIETakeHome-2.pdf
+
+# illustrator file
+*.ai

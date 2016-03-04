@@ -1,0 +1,25 @@
+<div class="background">
+	
+	<div class="title">Money is Sent</div>
+	<div class="thank">Thank you for using Paypal</div>
+
+	<table>
+		<tr>
+			<th>Transaction Detail</th>
+		</tr>
+		<tr>
+			<td>{{success.details.date}}</td>
+		</tr>
+		<tr>
+			<td>{{success.details.payee}}</td>
+		</tr>
+		<tr>
+			<td>{{success.details.amount}}</td>
+		</tr>
+	</table>
+
+	<div class="what">What to do next?</div>
+	<button class="large" ng-click="success.toSendMoneyPage()" class=""><strong>Send Money</strong></button>
+	<button class="large" ng-click="success.toHistoryPage()" class=""><strong>History</strong></button>
+
+</div>
